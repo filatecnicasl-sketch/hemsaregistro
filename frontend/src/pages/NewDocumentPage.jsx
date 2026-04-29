@@ -209,7 +209,7 @@ export default function NewDocumentPage() {
               type="submit"
               data-testid="newdoc-submit-btn"
               disabled={loading}
-              className="bg-black text-white hover:bg-slate-800 px-5 py-2.5 text-sm font-medium rounded-sm flex items-center gap-2 disabled:opacity-60"
+              className="btn-primary px-5 py-2.5 text-sm font-medium rounded-sm flex items-center gap-2"
             >
               <Save className="w-4 h-4" />
               {loading ? "Guardando..." : "Registrar entrada"}

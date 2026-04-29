@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
-import { Building2, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { LOGO_URL, BRAND } from "../lib/brand";
 import { toast } from "sonner";
 
 export default function LoginPage() {
@@ -32,21 +33,26 @@ export default function LoginPage() {
         <div className="absolute inset-0 grid-bg" />
         <div className="relative h-full flex flex-col justify-between p-12">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-black flex items-center justify-center">
-              <Building2 className="w-5 h-5 text-white" />
-            </div>
+            <img
+              src={LOGO_URL}
+              alt="Hemsa"
+              className="w-14 h-14 object-contain"
+            />
             <div>
-              <div className="font-display font-semibold text-slate-900">
-                Gestión Documental
+              <div className="font-display font-semibold text-slate-900 text-lg leading-none">
+                {BRAND.name}
               </div>
-              <div className="text-[11px] uppercase tracking-[0.2em] text-slate-500">
-                Sistema integral
+              <div className="text-[11px] uppercase tracking-[0.2em] text-slate-500 mt-1.5">
+                Servicios Públicos · San Fernando
               </div>
             </div>
           </div>
           <div>
+            <div className="text-[11px] uppercase tracking-[0.2em] text-brand font-semibold mb-3">
+              Gestión Documental
+            </div>
             <h2 className="font-display text-4xl font-light tracking-tight text-slate-900 leading-[1.1] max-w-md">
-              Registro y reparto de la documentación de tu organización.
+              Registro y reparto de la documentación de la organización.
             </h2>
             <p className="mt-6 text-sm text-slate-600 max-w-md">
               Recepciona, asigna a departamentos y haz seguimiento de cada
@@ -65,11 +71,14 @@ export default function LoginPage() {
 
       <div className="flex flex-col justify-center px-6 sm:px-12 lg:px-16 py-12 bg-white">
         <div className="lg:hidden mb-8 flex items-center gap-3">
-          <div className="w-10 h-10 bg-black flex items-center justify-center">
-            <Building2 className="w-5 h-5 text-white" />
-          </div>
-          <div className="font-display font-semibold text-slate-900">
-            Gestión Documental
+          <img src={LOGO_URL} alt="Hemsa" className="w-12 h-12 object-contain" />
+          <div>
+            <div className="font-display font-semibold text-slate-900 leading-none">
+              {BRAND.name}
+            </div>
+            <div className="text-[10px] uppercase tracking-[0.18em] text-slate-500 mt-1">
+              Gestión Documental
+            </div>
           </div>
         </div>
 
@@ -125,7 +134,7 @@ export default function LoginPage() {
               data-testid="login-submit-button"
               disabled={loading}
               type="submit"
-              className="w-full bg-black text-white hover:bg-slate-800 transition-colors py-2.5 px-6 text-sm font-medium rounded-sm flex items-center justify-center gap-2 disabled:opacity-60"
+              className="w-full btn-primary py-2.5 px-6 text-sm font-medium rounded-sm flex items-center justify-center gap-2"
             >
               {loading ? "Entrando..." : "Entrar"}
               <ArrowRight className="w-4 h-4" />
@@ -134,7 +143,7 @@ export default function LoginPage() {
 
           <div className="mt-6 text-sm text-slate-600">
             ¿No tienes cuenta?{" "}
-            <Link to="/register" data-testid="login-go-register" className="text-black underline underline-offset-2 font-medium hover:no-underline">
+            <Link to="/register" data-testid="login-go-register" className="text-brand underline underline-offset-2 font-medium hover:no-underline">
               Crear cuenta
             </Link>
           </div>

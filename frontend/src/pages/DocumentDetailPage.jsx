@@ -318,7 +318,7 @@ export default function DocumentDetailPage() {
                     <button
                       type="submit"
                       data-testid="docdetail-comment-submit"
-                      className="bg-black text-white hover:bg-slate-800 px-4 py-2 text-sm font-medium rounded-sm"
+                      className="btn-primary px-4 py-2 text-sm font-medium rounded-sm"
                     >
                       Enviar
                     </button>
@@ -388,7 +388,7 @@ export default function DocumentDetailPage() {
                     onClick={() => dispatchToDept(d.value)}
                     className={`px-3 py-2 text-xs font-medium rounded-sm border transition-colors ${
                       doc.department === d.value
-                        ? "bg-black text-white border-black"
+                        ? "bg-brand text-white border-brand"
                         : "bg-white text-slate-700 border-border hover:bg-slate-50"
                     }`}
                   >

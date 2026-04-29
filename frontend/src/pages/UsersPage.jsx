@@ -119,7 +119,7 @@ export default function UsersPage() {
         <button
           data-testid="users-create-btn"
           onClick={openCreate}
-          className="bg-black text-white hover:bg-slate-800 px-5 py-2.5 text-sm font-medium rounded-sm flex items-center gap-2"
+          className="btn-primary px-5 py-2.5 text-sm font-medium rounded-sm flex items-center gap-2"
         >
           <Plus className="w-4 h-4" />
           Nuevo usuario
@@ -290,7 +290,7 @@ export default function UsersPage() {
               <button
                 type="submit"
                 data-testid="userform-submit"
-                className="bg-black text-white hover:bg-slate-800 px-4 py-2 text-sm font-medium rounded-sm"
+                className="btn-primary px-4 py-2 text-sm font-medium rounded-sm"
               >
                 {editing ? "Guardar" : "Crear"}
               </button>

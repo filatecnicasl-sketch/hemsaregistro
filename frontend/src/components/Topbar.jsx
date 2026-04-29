@@ -103,7 +103,7 @@ export default function Topbar({ onMenu, query, setQuery }) {
               data-testid="topbar-user-menu-trigger"
               className="flex items-center gap-2 pl-2 pr-3 py-1.5 hover:bg-slate-100 rounded-sm transition-colors"
             >
-              <div className="w-8 h-8 bg-black text-white text-xs font-bold flex items-center justify-center rounded-sm">
+              <div className="w-8 h-8 bg-brand text-white text-xs font-bold flex items-center justify-center rounded-sm">
                 {(user?.name || "?")
                   .split(" ")
                   .map((s) => s[0])

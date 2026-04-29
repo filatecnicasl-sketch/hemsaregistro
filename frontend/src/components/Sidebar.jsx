@@ -1,6 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import { ROLE_LABEL, DEPT_LABEL } from "../lib/constants";
+import { LOGO_URL, BRAND } from "../lib/brand";
 import {
   LayoutGrid,
   FileText,
@@ -9,7 +10,6 @@ import {
   Bell,
   LogOut,
   Plus,
-  Building2,
 } from "lucide-react";
 
 const navItems = [
@@ -32,15 +32,17 @@ export default function Sidebar() {
       className="hidden lg:flex w-64 shrink-0 flex-col bg-white border-r border-border h-screen sticky top-0"
     >
       <div className="px-5 h-16 flex items-center gap-3 border-b border-border">
-        <div className="w-9 h-9 bg-black flex items-center justify-center">
-          <Building2 className="w-5 h-5 text-white" />
-        </div>
+        <img
+          src={LOGO_URL}
+          alt="Hemsa"
+          className="w-10 h-10 object-contain"
+        />
         <div>
           <div className="font-display font-semibold text-[15px] leading-none text-slate-900">
-            Gestión
+            {BRAND.name}
           </div>
           <div className="text-[10px] uppercase tracking-[0.18em] text-slate-500 mt-1">
-            Documental
+            Gestión Documental
           </div>
         </div>
       </div>
@@ -50,7 +52,7 @@ export default function Sidebar() {
           <button
             data-testid="sidebar-new-document-btn"
             onClick={() => navigate("/documentos/nuevo")}
-            className="w-full bg-black text-white hover:bg-slate-800 transition-colors py-2.5 px-3 text-sm font-medium flex items-center justify-center gap-2 rounded-sm"
+            className="w-full btn-primary py-2.5 px-3 text-sm font-medium flex items-center justify-center gap-2 rounded-sm"
           >
             <Plus className="w-4 h-4" />
             Registrar entrada

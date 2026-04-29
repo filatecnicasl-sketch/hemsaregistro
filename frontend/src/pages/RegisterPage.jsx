@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
-import { Building2, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { LOGO_URL, BRAND } from "../lib/brand";
 import { toast } from "sonner";
 
 export default function RegisterPage() {
@@ -105,7 +106,7 @@ export default function RegisterPage() {
             data-testid="register-submit-button"
             type="submit"
             disabled={loading}
-            className="w-full bg-black text-white hover:bg-slate-800 py-2.5 px-6 text-sm font-medium rounded-sm flex items-center justify-center gap-2 disabled:opacity-60"
+            className="w-full btn-primary py-2.5 px-6 text-sm font-medium rounded-sm flex items-center justify-center gap-2"
           >
             {loading ? "Creando..." : "Crear cuenta"}
             <ArrowRight className="w-4 h-4" />
@@ -117,7 +118,7 @@ export default function RegisterPage() {
           <Link
             to="/login"
             data-testid="register-go-login"
-            className="text-black underline underline-offset-2 font-medium hover:no-underline"
+            className="text-brand underline underline-offset-2 font-medium hover:no-underline"
           >
             Iniciar sesión
           </Link>

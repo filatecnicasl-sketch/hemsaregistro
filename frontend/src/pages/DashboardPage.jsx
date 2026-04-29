@@ -37,7 +37,7 @@ function MiniBar({ data, max }) {
         return (
           <div key={d.date} className="flex-1 flex flex-col items-center gap-1">
             <div
-              className="w-full bg-slate-900/90 hover:bg-black transition-colors"
+              className="w-full bg-slate-900/90 hover:bg-brand transition-colors"
               style={{ height: `${Math.max(h, 4)}%`, minHeight: "4px" }}
               title={`${d.label}: ${d.count}`}
             />
@@ -79,7 +79,7 @@ export default function DashboardPage() {
           <Link
             to="/documentos/nuevo"
             data-testid="dashboard-new-doc-btn"
-            className="bg-black text-white hover:bg-slate-800 px-5 py-2.5 text-sm font-medium rounded-sm flex items-center gap-2"
+            className="btn-primary px-5 py-2.5 text-sm font-medium rounded-sm flex items-center gap-2"
           >
             <Plus className="w-4 h-4" />
             Registrar entrada

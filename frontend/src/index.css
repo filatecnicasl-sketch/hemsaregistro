@@ -36,8 +36,10 @@ h4,
         --card-foreground: 222 24% 11%;
         --popover: 0 0% 100%;
         --popover-foreground: 222 24% 11%;
-        --primary: 0 0% 0%;
+        --primary: 154 71% 42%;
         --primary-foreground: 0 0% 100%;
+        --brand: 154 71% 42%;
+        --brand-dark: 154 73% 32%;
         --secondary: 220 14% 96%;
         --secondary-foreground: 222 24% 11%;
         --muted: 220 14% 96%;
@@ -48,9 +50,41 @@ h4,
         --destructive-foreground: 0 0% 100%;
         --border: 220 13% 91%;
         --input: 220 13% 91%;
-        --ring: 0 0% 0%;
+        --ring: 154 71% 42%;
         --radius: 0.125rem;
     }
+}
+
+/* Brand utility classes (Hemsa green #1FB877) */
+.bg-brand {
+    background-color: #1fb877;
+}
+.bg-brand:hover {
+    background-color: #168d5c;
+}
+.hover\:bg-brand-dark:hover {
+    background-color: #168d5c;
+}
+.text-brand {
+    color: #1fb877;
+}
+.border-brand {
+    border-color: #1fb877;
+}
+.ring-brand {
+    --tw-ring-color: #1fb877;
+}
+.btn-primary {
+    background-color: #1fb877;
+    color: white;
+    transition: background-color 0.2s ease-out;
+}
+.btn-primary:hover {
+    background-color: #168d5c;
+}
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 @layer base {
@@ -154,8 +188,9 @@ h4,
 .auth-cover {
     background:
         linear-gradient(
-            120deg,
-            rgba(255, 255, 255, 0.92) 0%,
+            135deg,
+            rgba(31, 184, 119, 0.06) 0%,
+            rgba(255, 255, 255, 0.85) 45%,
             rgba(255, 255, 255, 0.6) 100%
         ),
         url("https://images.unsplash.com/photo-1771678040857-51d00a11be7a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHw0fHxtaW5pbWFsaXN0JTIwbW9kZXJuJTIwb2ZmaWNlJTIwYXJjaGl0ZWN0dXJlJTIwd2hpdGV8ZW58MHx8fHwxNzc3NDY5NzM2fDA&ixlib=rb-4.1.0&q=85");
