@@ -12,6 +12,7 @@ import DocumentDetailPage from "./pages/DocumentDetailPage";
 import UsersPage from "./pages/UsersPage";
 import NotificationsPage from "./pages/NotificationsPage";
 import TemplatesPage from "./pages/TemplatesPage";
+import ManualPage from "./pages/ManualPage";
 
 function PublicOnly({ children }) {
   const { user, loading } = useAuth();
@@ -104,6 +105,14 @@ function App() {
               element={
                 <ProtectedRoute>
                   <TemplatesPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/manual"
+              element={
+                <ProtectedRoute>
+                  <ManualPage />
                 </ProtectedRoute>
               }
             />

@@ -11,6 +11,7 @@ import {
   LogOut,
   Plus,
   Layers,
+  BookOpen,
 } from "lucide-react";
 
 const navItems = [
@@ -20,6 +21,7 @@ const navItems = [
   { to: "/plantillas", label: "Plantillas", icon: Layers, roles: null, testid: "nav-templates" },
   { to: "/notificaciones", label: "Notificaciones", icon: Bell, roles: null, testid: "nav-notifications" },
   { to: "/usuarios", label: "Usuarios", icon: Users, roles: ["admin"], testid: "nav-users" },
+  { to: "/manual", label: "Manual", icon: BookOpen, roles: null, testid: "nav-manual" },
 ];
 
 export default function Sidebar() {

@@ -21,6 +21,7 @@ const titles = {
   "/usuarios": "Usuarios",
   "/notificaciones": "Notificaciones",
   "/plantillas": "Plantillas de respuesta",
+  "/manual": "Manual de usuario",
 };
 
 function getTitle(pathname) {
