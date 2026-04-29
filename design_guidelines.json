@@ -1,0 +1,146 @@
+{
+  "project_name": "Sistema de Gestión Documental Integral",
+  "theme": "light",
+  "archetype": {
+    "id": 4,
+    "name": "Swiss & High-Contrast",
+    "rationale": "For an internal business document management system, the priority is objective clarity, dense data presentation, and authority. The design must be distraction-free to enhance productivity for receptionists and department heads."
+  },
+  "typography": {
+    "strategy": "Swiss Brutalist",
+    "headings": {
+      "font_family": "Outfit, sans-serif",
+      "import_url": "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap",
+      "usage_rules": "Use for all page titles, widget titles, and numbers/stats. Never center by default. Use tracking-tight for sizes above 32px."
+    },
+    "body": {
+      "font_family": "IBM Plex Sans, sans-serif",
+      "import_url": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap",
+      "usage_rules": "Strictly for tabular data, labels, timestamps, and input fields. Enhances legibility of complex data."
+    },
+    "scale": {
+      "h1": "text-4xl sm:text-5xl font-semibold tracking-tight",
+      "h2": "text-2xl sm:text-3xl font-medium tracking-tight",
+      "h3": "text-xl font-medium",
+      "h4": "text-lg font-medium",
+      "body": "text-sm text-slate-700",
+      "label": "text-xs font-semibold uppercase tracking-[0.1em] text-slate-500",
+      "metric": "text-5xl font-light tracking-tighter"
+    }
+  },
+  "colors": {
+    "background": {
+      "primary": "#FFFFFF",
+      "secondary": "#F8F9FA",
+      "tertiary": "#F1F3F5"
+    },
+    "surface": {
+      "default": "#FFFFFF",
+      "muted": "#F8F9FA"
+    },
+    "text": {
+      "primary": "#111827",
+      "secondary": "#4B5563",
+      "tertiary": "#9CA3AF"
+    },
+    "border": {
+      "default": "#E5E7EB",
+      "strong": "#D1D5DB"
+    },
+    "brand": {
+      "primary": "#000000",
+      "primary_hover": "#1F2937",
+      "accent": "#0052FF",
+      "accent_hover": "#0040CC"
+    },
+    "status": {
+      "recibido": {"bg": "#E0F2FE", "text": "#0369A1", "border": "#BAE6FD"},
+      "repartido": {"bg": "#FEF08A", "text": "#854D0E", "border": "#FDE047"},
+      "asignado": {"bg": "#DDD6FE", "text": "#5B21B6", "border": "#C4B5FD"},
+      "en_proceso": {"bg": "#FFEDD5", "text": "#C2410C", "border": "#FED7AA"},
+      "finalizado": {"bg": "#DCFCE7", "text": "#15803D", "border": "#BBF7D0"},
+      "archivado": {"bg": "#F3F4F6", "text": "#4B5563", "border": "#E5E7EB"}
+    }
+  },
+  "spacing_and_layout": {
+    "philosophy": "High density but structured. Use The 'Control Room' Grid protocol.",
+    "global_padding": "px-6 py-8 md:px-12 md:py-10",
+    "bento_grid": {
+      "base": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4",
+      "gap": "gap-4 md:gap-6",
+      "widget_summary": "col-span-1",
+      "widget_main": "col-span-1 md:col-span-2 lg:col-span-3",
+      "widget_sidebar": "col-span-1 lg:col-span-1"
+    },
+    "surface_strategy": "Grid Borders (The 'Technical' Look). Use flat backgrounds with 1px subtle borders (border-border). No soft shadows on cards, use crisp 1px borders instead.",
+    "radius": "rounded-none or max rounded-sm (2px) to maintain the Swiss Brutalist authoritative look.",
+    "alignment": "Strictly left-aligned text. Avoid centering to maintain an objective scanning flow (F-pattern)."
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-black text-white hover:bg-slate-800 rounded-sm px-6 py-2.5 font-medium transition-colors border border-black",
+      "secondary": "bg-white text-black hover:bg-slate-100 rounded-sm px-6 py-2.5 font-medium transition-colors border border-border",
+      "danger": "bg-red-600 text-white hover:bg-red-700 rounded-sm px-6 py-2.5 font-medium transition-colors"
+    },
+    "cards": {
+      "default": "bg-white border border-border/60 p-6 flex flex-col gap-4",
+      "interactive": "bg-white border border-border/60 p-6 flex flex-col gap-4 hover:-translate-y-0.5 hover:shadow-sm hover:border-border transition-all cursor-pointer"
+    },
+    "tables": {
+      "header": "bg-slate-50 border-b border-border text-xs font-semibold uppercase tracking-wider text-slate-500 py-3 px-4",
+      "row": "border-b border-border/40 hover:bg-slate-50/50 transition-colors",
+      "cell": "py-3 px-4 text-sm text-slate-700"
+    },
+    "inputs": {
+      "default": "border border-border bg-white px-3 py-2 text-sm rounded-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black transition-all",
+      "label": "block text-xs font-semibold text-slate-700 mb-1.5"
+    },
+    "navigation": {
+      "sidebar": "w-64 bg-slate-50 border-r border-border h-screen flex flex-col",
+      "header": "h-16 bg-white border-b border-border flex items-center px-6 sticky top-0 z-50"
+    }
+  },
+  "motion_and_interactions": {
+    "global_transitions": "transition-all duration-200 ease-out",
+    "hover_states": "Buttons and links MUST explicitly change color on hover. Row highlights in tables use extreme subtlety (bg-slate-50).",
+    "focus_states": "focus:ring-1 focus:ring-black focus:border-black outline-none",
+    "modals": "Slide-in from right (Drawer style) preferred over centered popups for document details, ensuring background context remains visible."
+  },
+  "icons_strategy": {
+    "library": "phosphor-icons",
+    "installation_command": "yarn add @phosphor-icons/react",
+    "weight": "regular",
+    "usage": "Use icons strictly for functional signposting (e.g., document types, actions like download/forward, navigation items). Do not use decorative icons."
+  },
+  "media_urls": {
+    "auth_background": {
+      "url": "https://images.unsplash.com/photo-1771678040857-51d00a11be7a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHw0fHxtaW5pbWFsaXN0JTIwbW9kZXJuJTIwb2ZmaWNlJTIwYXJjaGl0ZWN0dXJlJTIwd2hpdGV8ZW58MHx8fHwxNzc3NDY5NzM2fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Clean, architectural white minimal office background for the login/register screen.",
+      "usage": "Use as a full-cover background image on the split-screen auth layout."
+    },
+    "brand_logo": {
+      "url": "https://images.unsplash.com/photo-1633269540827-728aabbb7646?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwYnVzaW5lc3MlMjBsb2dvJTIwYWJzdHJhY3QlMjBzaGFwZXxlbnwwfHx8fDE3Nzc0Njk3NDd8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract minimalist logo mark.",
+      "usage": "Display in the sidebar header and login screen."
+    },
+    "user_avatar": {
+      "url": "https://images.unsplash.com/photo-1762522926157-bcc04bf0b10a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBjb3Jwb3JhdGUlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc3NzM2MDg2N3ww&ixlib=rb-4.1.0&q=85",
+      "description": "Professional corporate headshot for the default user profile.",
+      "usage": "Use in the top right header dropdown or profile settings."
+    }
+  },
+  "testing_attributes": {
+    "rule": "All interactive and key informational elements MUST include a data-testid attribute in kebab-case representing their role.",
+    "examples": ["data-testid='login-submit-button'", "data-testid='document-status-badge'", "data-testid='assign-document-select'"]
+  },
+  "instructions_to_main_agent": [
+    "Do NOT use the generic 'Inter' font for headings; strictly use 'Outfit' for headings and 'IBM Plex Sans' for body text.",
+    "Implement the 'Swiss Brutalist' layout. Avoid generous rounded corners; use rounded-none or rounded-sm. Emphasize grid lines with thin borders (border-border).",
+    "Use Shadcn UI components (Tables, Dialogs, Selects, Dropdowns) but customize them heavily to remove the default rounded Vercel-look and replace it with crisp, square corners.",
+    "For the document states, use the specific color tokens provided in colors.status to generate clear, high-contrast badges.",
+    "The Dashboard must use the 'Control Room' grid strategy. Optimize vertical space. Use dense data rows rather than large empty cards.",
+    "For forms (e.g., document entry), use a strictly left-aligned, structured grid layout rather than a single centered column.",
+    "Do NOT use placeholder text or dummy image APIs. Rely solely on the media_urls provided.",
+    "Implement JWT-based mock authentication flow in Spanish."
+  ]
+}
